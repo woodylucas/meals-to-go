@@ -5,17 +5,16 @@ import { RestaurantInfoCard } from "../components/RestaurantInfoCard";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1; 
-  margin-top: ${StatusBar.currentHeight}px;
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
 `;
 
 const RestaurantListContainer = styled(View)`
   flex: 1;
-  padding: 16px;
-  background-color: #0000FF;
+  padding: ${({ theme }) => theme.space[3]};
 `;
 
 const SearchBarContainer = styled(View)`
-  padding: 16px;
+  padding:${({ theme }) => theme.space[3]};
 `;
 
 export const RestaurantScreen = () => {
