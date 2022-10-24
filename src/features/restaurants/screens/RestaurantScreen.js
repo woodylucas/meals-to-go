@@ -4,7 +4,7 @@ import { SearchBar } from "../../../components/SearchBar";
 import { RestaurantInfoCard } from "../components/RestaurantInfoCard";
 
 const SafeArea = styled(SafeAreaView)`
-  flex: 1; 
+  flex: 1;
   ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
 `;
 
@@ -14,7 +14,7 @@ const RestaurantListContainer = styled(View)`
 `;
 
 const SearchBarContainer = styled(View)`
-  padding:${({ theme }) => theme.space[3]};
+  padding: ${({ theme }) => theme.space[3]};
 `;
 
 export const RestaurantScreen = () => {

@@ -3,7 +3,7 @@ import { Card } from "react-native-paper";
 import styled from "styled-components/native";
 
 const RestaurantCard = styled(Card)`
-  background-color:${({ theme }) => theme.colors.ui.quaternary};
+  background-color: ${({ theme }) => theme.colors.ui.quaternary};
 `;
 
 const RestaurantCardCover = styled(Card.Cover)`
@@ -12,6 +12,7 @@ const RestaurantCardCover = styled(Card.Cover)`
 `;
 
 const Title = styled(Text)`
+  font-family: ${({ theme }) => theme.fonts.body}
   padding: ${({ theme }) => theme.space[3]};
   color: ${({ theme }) => theme.colors.ui.primary};
 `;
@@ -28,6 +29,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     rating = 4,
     isClosedTemporarily,
   } = restaurant;
+
   return (
     <RestaurantCard elevation={5}>
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
