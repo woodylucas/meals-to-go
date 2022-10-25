@@ -1,13 +1,9 @@
-import { StatusBar, SafeAreaView, View, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
 import styled from "styled-components/native";
 import { SearchBar } from "../../../components/SearchBar";
 import { Spacer } from "../../../components/spacer/Spacer";
 import { RestaurantInfoCard } from "../components/RestaurantInfoCard";
-
-const SafeArea = styled(SafeAreaView)`
-  flex: 1;
-  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
-`;
+import { SafeArea } from "../../../components/utils/SafeAreaComponent";
 
 const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: {
