@@ -24,8 +24,8 @@ const LoadingContainer = styled.View`
   left: 50%;
 `;
 
-export const RestaurantScreen = () => {
-  const { restaurants, error, isLoading } = useContext(RestaurantContext);
+export const RestaurantsScreen = () => {
+  const { isLoading, restaurants } = useContext(RestaurantContext);
   return (
     <SafeArea>
       {isLoading && (
@@ -36,13 +36,14 @@ export const RestaurantScreen = () => {
       <Search />
       <RestaurantList
         data={restaurants}
-        renderItem={({ item }) => (
-          <Spacer position="bottom" size="large">
-            <RestaurantInfoCard restaurant={item} />
-          </Spacer>
-        )}
+        renderItem={({ item }) => {
+          return (
+            <Spacer position="bottom" size="large">
+              <RestaurantInfoCard restaurant={item} />
+            </Spacer>
+          );
+        }}
         keyExtractor={(item) => item.name}
-        // eslint-disable-next-line react-native/no-inline-styles
       />
     </SafeArea>
   );
